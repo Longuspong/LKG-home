@@ -19,7 +19,11 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  background: var(--color-dark);
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -27,6 +31,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -131,6 +136,7 @@ h1, h2, h3 {
   background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-dark-2) 55%, var(--color-teal) 100%);
   color: var(--color-text-light);
   padding: 3rem 0 3.5rem;
+  margin-top: -1px;
   text-align: center;
 }
 
