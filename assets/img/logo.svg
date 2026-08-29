@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Logo Landeskirchliche Gemeinschaft Limbach-Oberfrohna</title>
+  <!-- linke Ribbon-Fläche -->
+  <polygon points="8,8 54,8 54,118 31,96 8,118" fill="#3d6e7a"/>
+  <!-- rechte Ribbon-Fläche -->
+  <polygon points="66,8 112,8 112,118 89,96 66,118" fill="#7fc1cc"/>
+  <!-- gelber Akzent unten links -->
+  <polygon points="8,96 31,96 8,118" fill="#f2ca3f"/>
+  <!-- Kreuz: vertikaler Balken (Lücke zwischen den Ribbons wird durch weißes Rechteck ergänzt) -->
+  <rect x="54" y="8" width="12" height="110" fill="#ffffff"/>
+  <!-- Kreuz: horizontaler Balken -->
+  <rect x="34" y="38" width="52" height="14" fill="#ffffff"/>
+</svg>
