@@ -1,0 +1,49 @@
+{
+  "meetingPlace": "Pleißaer Str. 13c, 09212 Limbach-Oberfrohna",
+  "weeklySchedule": [
+    { "what": "Gemeinschaftsstunde", "when": "1. So. im Monat 15 Uhr, sonst 17 Uhr" },
+    { "what": "Bibelstunde", "when": "jeden Mittwoch 19:30 Uhr" },
+    { "what": "Jugendstunde", "when": "jeden Donnerstag 19 Uhr" },
+    { "what": "Partner- & Singlekreis", "when": "1. Fr. im Monat 19:30 Uhr" },
+    { "what": "Bikerbibelkreis", "when": "2. Fr. im Monat 19:30 Uhr" },
+    { "what": "Kinderkreis", "when": "jeden Samstag 10–11:15 Uhr" }
+  ],
+  "tables": [
+    {
+      "title": "Nächste Gemeinschaftsstunden (Sonntags)",
+      "columns": ["Datum", "Uhrzeit", "Thema / Prediger", "Empfang", "Fahrdienst"],
+      "rows": [
+        ["30.08.2026", "17:00", "Stadtparkgottesdienst", "Rolf H.", "Andreas K."],
+        ["06.09.2026", "15:00", "Plock, Wilfried", "Ronny D.", "Michael T."],
+        ["13.09.2026", "17:00", "Kazmirzak, Uwe", "Uwe R.", "Mike D."],
+        ["20.09.2026", "17:00", "Pflugbeil, Falko", "Gunter T.", "Uwe R."],
+        ["27.09.2026", "17:00", "Kunz, Robby", "Dieter W.", "Janet D."]
+      ]
+    },
+    {
+      "title": "Bibelstunden (Mittwochs, 19:30 Uhr)",
+      "columns": ["Datum", "Wer gestaltet"],
+      "rows": [
+        ["09.09.2026", "Otto, Markus"],
+        ["16.09.2026", "noch offen"],
+        ["23.09.2026", "noch offen"],
+        ["30.09.2026", "noch offen"]
+      ]
+    },
+    {
+      "title": "Frauenstunde (1. Mittwoch im Monat, 19:30 Uhr)",
+      "columns": ["Datum", "Wer gestaltet"],
+      "rows": [
+        ["02.09.2026", "Hernes, Lydia"]
+      ]
+    },
+    {
+      "title": "Besondere Termine",
+      "columns": ["Datum", "Zeit", "Was"],
+      "rows": [
+        ["04.09. – 06.09.2026", "siehe Programm", "Themenabende „Unsere Beziehungen sollen (noch) besser werden!“ mit Wilfried Plock"]
+      ]
+    }
+  ],
+  "note": "Termine und Einteilungen können sich kurzfristig ändern – bitte auch unsere Ansagen in der Gemeinschaftsstunde beachten."
+}
