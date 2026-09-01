@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" role="img" aria-labelledby="logoLightTitle">
+  <title id="logoLightTitle">Logo Landeskirchliche Gemeinschaft Limbach-Oberfrohna</title>
+  <!-- Helle Variante fuer dunklen Hintergrund: weisse Tuerfluegel,
+       Kreuz als Aussparung (Hintergrund scheint durch), farbige Akzente. -->
+  <!-- Tuerfluegel (weiss), Kreuz bleibt als Luecke frei -->
+  <polygon points="28,10 54,10 54,40 10,40 10,28" fill="#f2f6f7"/>
+  <polygon points="66,10 110,10 110,40 66,40" fill="#f2f6f7"/>
+  <polygon points="10,52 54,52 54,118 10,118" fill="#f2f6f7"/>
+  <polygon points="66,52 110,52 110,100 92,118 66,118" fill="#f2f6f7"/>
+  <!-- Tuerkis-Akzente in den Ecken (oben links / unten rechts) -->
+  <polygon points="10,10 28,10 10,28" fill="#7fc1cc"/>
+  <polygon points="110,118 92,118 110,100" fill="#7fc1cc"/>
+  <!-- Gelbe Akzente (oben Mitte / unten Mitte) -->
+  <polygon points="66,10 82,10 66,26" fill="#f2ca3f"/>
+  <polygon points="54,118 38,118 54,102" fill="#f2ca3f"/>
+</svg>

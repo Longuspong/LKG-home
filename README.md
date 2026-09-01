@@ -14,7 +14,8 @@ impressum.html      Impressum (Platzhalter – siehe unten)
 datenschutz.html     Datenschutzerklärung (Platzhalter – siehe unten)
 assets/css/style.css  Gesamtes Styling (mobile-first)
 assets/js/main.js     Mobiles Menü, aktuelles Jahr im Footer
-assets/img/logo.svg   Vereinfachtes Logo (siehe unten)
+assets/img/logo.svg       Logo-Zeichen farbig (Favicon / helle Flächen)
+assets/img/logo-light.svg  Logo-Zeichen weiß (Header/Hero, dunkler Grund)
 ```
 
 ## Lokal ansehen
@@ -41,10 +42,14 @@ und dann `http://localhost:8000` öffnen.
 
 ## Noch offen / vor Veröffentlichung zu erledigen
 
-- **Logo:** `assets/img/logo.svg` ist eine grobe Nachbildung des
-  Logos anhand des Flyer-Screenshots. Bitte durch die echte Logo-Datei
-  ersetzen (gleicher Dateiname reicht, oder Pfad in den `<link>`/`<img>`-
-  Tags anpassen).
+- **Logo:** Das Zeichen (Tür mit Kreuz) ist als SVG anhand der
+  Logo-Vorlagen nachgebaut – `logo.svg` farbig fürs Favicon, `logo-light.svg`
+  weiß für den dunklen Header/Hero. Der Schriftzug „Landeskirchliche
+  Gemeinschaft Limbach-Oberfrohna" wird bewusst als HTML-Text (Montserrat)
+  gesetzt, damit er scharf und responsiv bleibt. Es bleibt eine Nachbildung:
+  Sobald die echte Vektordatei (SVG/EPS/PDF) vom Grafiker/Flyer vorliegt,
+  können die beiden SVGs damit ersetzt werden (gleiche Dateinamen reichen,
+  oder Pfade in den `<link>`/`<img>`-Tags anpassen).
 - **Impressum** (`impressum.html`): verantwortliche Person, Kontakt
   (Telefon/E-Mail) eintragen – gesetzlich vorgeschrieben.
 - **Datenschutz** (`datenschutz.html`): verantwortliche Person und
