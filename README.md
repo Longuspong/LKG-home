@@ -14,7 +14,9 @@ impressum.html      Impressum (Platzhalter – siehe unten)
 datenschutz.html     Datenschutzerklärung (Platzhalter – siehe unten)
 assets/css/style.css  Gesamtes Styling (mobile-first)
 assets/js/main.js     Mobiles Menü, aktuelles Jahr im Footer
-assets/img/logo.svg   Vereinfachtes Logo (siehe unten)
+assets/img/logo.svg              Logo-Zeichen (Tür/Kreuz) – Favicon
+assets/img/logo-navi.svg         Logo weiß mit Gemeindename – Header/Navigation
+assets/img/logo-jesus-erlebt.svg  Logo weiß „Jesus erlebt" – Hero
 ```
 
 ## Lokal ansehen
@@ -41,10 +43,13 @@ und dann `http://localhost:8000` öffnen.
 
 ## Noch offen / vor Veröffentlichung zu erledigen
 
-- **Logo:** `assets/img/logo.svg` ist eine grobe Nachbildung des
-  Logos anhand des Flyer-Screenshots. Bitte durch die echte Logo-Datei
-  ersetzen (gleicher Dateiname reicht, oder Pfad in den `<link>`/`<img>`-
-  Tags anpassen).
+- **Logo:** Es werden die Original-Logos (weiße Fassung) verwendet:
+  `logo-navi.svg` (Zeichen + Gemeindename) im Header, `logo-jesus-erlebt.svg`
+  (Zeichen + „Jesus erlebt") im Hero. Beide enthalten den Schriftzug bereits,
+  deshalb steht in Header/Hero kein zusätzlicher Text mehr. `logo.svg` ist
+  das Tür-Zeichen für das Favicon (dunkel eingefärbt, damit es auf hellem
+  Tab sichtbar ist). Zum Austauschen einfach die SVG-Dateien ersetzen bzw.
+  die Pfade in den `<link>`/`<img>`-Tags anpassen.
 - **Impressum** (`impressum.html`): verantwortliche Person, Kontakt
   (Telefon/E-Mail) eintragen – gesetzlich vorgeschrieben.
 - **Datenschutz** (`datenschutz.html`): verantwortliche Person und

@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" role="img" aria-labelledby="logoTitle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 92" role="img" aria-labelledby="logoTitle">
   <title id="logoTitle">Logo Landeskirchliche Gemeinschaft Limbach-Oberfrohna</title>
-  <!-- linke Ribbon-Fläche -->
-  <polygon points="8,8 54,8 54,118 31,96 8,118" fill="#3d6e7a"/>
-  <!-- rechte Ribbon-Fläche -->
-  <polygon points="66,8 112,8 112,118 89,96 66,118" fill="#7fc1cc"/>
-  <!-- gelber Akzent unten links -->
-  <polygon points="8,96 31,96 8,118" fill="#f2ca3f"/>
-  <!-- Kreuz: vertikaler Balken (Lücke zwischen den Ribbons wird durch weißes Rechteck ergänzt) -->
-  <rect x="54" y="8" width="12" height="110" fill="#ffffff"/>
-  <!-- Kreuz: horizontaler Balken -->
-  <rect x="34" y="38" width="52" height="14" fill="#ffffff"/>
+  <!-- Favicon: Tür-Zeichen aus dem Original, Flügel dunkel eingefärbt
+       (für helle Tab-Hintergründe), Kreuz als Aussparung. -->
+  <!-- gelbe Akzente -->
+  <polygon points="33.02 78.94 33.02 83.28 20.64 89.37 20.64 81.85 33.02 78.94" fill="#ffed00"/>
+  <polygon points="54.42 2.04 54.42 9.56 42.05 12.47 42.05 8.12 54.42 2.04" fill="#ffed00"/>
+  <!-- türkise Akzente -->
+  <polygon points="33.02 12.47 33.02 14.59 25.12 16.44 3.35 21.55 3.35 5.5 33.02 12.47" fill="#80c1d1"/>
+  <polygon points="71.71 69.86 71.71 85.9 42.05 78.94 42.05 76.82 49.93 74.97 71.71 69.86" fill="#80c1d1"/>
+  <!-- Türflügel (dunkel) -->
+  <polygon points="14.94 30.88 14.94 39.91 33.02 39.91 33.02 78.94 20.64 81.85 3.35 85.9 3.35 21.55 25.12 16.44 33.02 14.59 33.02 30.88 14.94 30.88" fill="#3d6e7a"/>
+  <polygon points="71.71 5.5 71.71 69.86 49.93 74.97 42.05 76.82 42.05 39.91 60.13 39.91 60.13 30.88 42.05 30.88 42.05 12.47 54.42 9.56 71.71 5.5" fill="#3d6e7a"/>
 </svg>
