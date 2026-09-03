@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Termine – Landeskirchliche Gemeinschaft Limbach-Oberfrohna</title>
+  <meta name="description" content="Alle Termine der Landeskirchlichen Gemeinschaft Limbach-Oberfrohna – Gemeinschaftsstunden, Bibelstunden, Frauenstunde und besondere Termine.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-navi.svg" alt="Landeskirchliche Gemeinschaft Limbach-Oberfrohna">
+      </a>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">&#9776;</button>
+      <nav class="main-nav">
+        <a href="index.html#impuls">Impuls</a>
+        <a href="termine.html">Termine</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Termine</h1>
+    </div>
+  </div>
+
+  <main class="page-content termine">
+    <div class="container">
+      <a class="back-link" href="index.html">&larr; Zurück zur Startseite</a>
+
+      <p class="meeting-place">im Gemeinschaftshaus <strong>Pleißaer Str. 13c, 09212 Limbach-Oberfrohna</strong></p>
+      <p class="next-hint">Der jeweils nächste Termin ist <span class="hl">hervorgehoben</span>.</p>
+
+      <!--
+        Diese Tabellen sind die Grundlage für die Termine und werden
+        quartalsweise gepflegt. Zeilen ergänzen/entfernen und die Daten
+        aktualisieren. Wichtig: das Attribut data-date="JJJJ-MM-TT" pro Zeile
+        pflegen – daran erkennt die Seite automatisch den nächsten Termin
+        und hebt ihn hervor. Siehe README.md.
+      -->
+
+      <h2>Gemeinschaftsstunden (Sonntags)</h2>
+      <div class="table-scroll">
+        <table data-schedule>
+          <thead>
+            <tr><th>Datum</th><th>Uhrzeit</th><th>Thema / Prediger</th><th>Empfang</th><th>Fahrdienst</th></tr>
+          </thead>
+          <tbody>
+            <tr data-date="2026-08-30"><td>30.08.2026</td><td>17:00</td><td>Stadtparkgottesdienst</td><td>Rolf H.</td><td>Andreas K.</td></tr>
+            <tr data-date="2026-09-06"><td>06.09.2026</td><td>15:00</td><td>Plock, Wilfried</td><td>Ronny D.</td><td>Michael T.</td></tr>
+            <tr data-date="2026-09-13"><td>13.09.2026</td><td>17:00</td><td>Kazmirzak, Uwe</td><td>Uwe R.</td><td>Mike D.</td></tr>
+            <tr data-date="2026-09-20"><td>20.09.2026</td><td>17:00</td><td>Pflugbeil, Falko</td><td>Gunter T.</td><td>Uwe R.</td></tr>
+            <tr data-date="2026-09-27"><td>27.09.2026</td><td>17:00</td><td>Kunz, Robby</td><td>Dieter W.</td><td>Janet D.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Bibelstunden (Mittwochs, 19:30 Uhr)</h2>
+      <div class="table-scroll">
+        <table data-schedule>
+          <thead><tr><th>Datum</th><th>Wer gestaltet</th></tr></thead>
+          <tbody>
+            <tr data-date="2026-09-09"><td>09.09.2026</td><td>Otto, Markus</td></tr>
+            <tr data-date="2026-09-16"><td>16.09.2026</td><td>noch offen</td></tr>
+            <tr data-date="2026-09-23"><td>23.09.2026</td><td>noch offen</td></tr>
+            <tr data-date="2026-09-30"><td>30.09.2026</td><td>noch offen</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Frauenstunde (1. Mittwoch im Monat, 19:30 Uhr)</h2>
+      <div class="table-scroll">
+        <table data-schedule>
+          <thead><tr><th>Datum</th><th>Wer gestaltet</th></tr></thead>
+          <tbody>
+            <tr data-date="2026-09-02"><td>02.09.2026</td><td>Hernes, Lydia</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Besondere Termine</h2>
+      <div class="table-scroll">
+        <table data-schedule>
+          <thead><tr><th>Datum</th><th>Zeit</th><th>Was</th></tr></thead>
+          <tbody>
+            <tr data-date="2026-09-06"><td>04.09. – 06.09.2026</td><td>siehe Programm</td><td>Themenabende „Unsere Beziehungen sollen (noch) besser werden!“ mit Wilfried Plock</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">Termine und Einteilungen können sich kurzfristig ändern – bitte auch unsere Ansagen in der Gemeinschaftsstunde beachten.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <address>
+        Landeskirchliche Gemeinschaft Limbach-Oberfrohna<br>
+        Pleißaer Str. 13c<br>
+        09212 Limbach-Oberfrohna
+      </address>
+      <ul class="footer-links">
+        <li><a href="archiv.html">Andachten-Archiv</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <p class="copyright">© <span id="year">2026</span> Landeskirchliche Gemeinschaft Limbach-Oberfrohna</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

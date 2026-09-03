@@ -20,4 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  // In jeder Termin-Tabelle den nächsten (ersten noch nicht vergangenen)
+  // Termin hervorheben. Grundlage ist das Attribut data-date="JJJJ-MM-TT".
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  document.querySelectorAll('table[data-schedule]').forEach(function (table) {
+    var rows = table.querySelectorAll('tbody tr[data-date]');
+    for (var i = 0; i < rows.length; i++) {
+      var date = new Date(rows[i].getAttribute('data-date') + 'T00:00:00');
+      if (!isNaN(date.getTime()) && date >= today) {
+        rows[i].classList.add('is-next');
+        break;
+      }
+    }
+  });
 });

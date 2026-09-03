@@ -297,10 +297,48 @@ section { padding: 2.75rem 0; }
 
 .meeting-place strong { color: var(--color-dark); }
 
+.termine-cta {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 .termine h3 {
   font-size: 1rem;
   color: var(--color-dark);
   margin: 2rem 0 0.75rem;
+}
+
+/* ---------- Termine-Seite ---------- */
+
+.next-hint {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7a7e;
+  margin: -1rem 0 2rem;
+}
+
+.next-hint .hl {
+  color: var(--color-dark);
+  font-weight: 700;
+  background: rgba(242, 202, 63, 0.35);
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+}
+
+.page-content.termine h2 {
+  font-size: 1.05rem;
+  color: var(--color-dark);
+  margin: 2.25rem 0 0.75rem;
+}
+
+tr.is-next td {
+  background: rgba(242, 202, 63, 0.18);
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+tr.is-next td:first-child {
+  box-shadow: inset 4px 0 0 var(--color-yellow);
 }
 
 .table-scroll {

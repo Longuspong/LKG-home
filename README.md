@@ -8,7 +8,8 @@ per FTP-Upload).
 ## Struktur
 
 ```
-index.html         Startseite (Hero, Impuls-Teaser, Termine, Kontakt)
+index.html         Startseite (Hero, Impuls-Teaser, Treffzeiten, Kontakt)
+termine.html        Alle Termine (Tabellen, nächster Termin hervorgehoben)
 archiv.html         Archiv aller Monatsimpulse (Volltexte)
 impressum.html      Impressum (Platzhalter – siehe unten)
 datenschutz.html     Datenschutzerklärung (Platzhalter – siehe unten)
@@ -36,10 +37,19 @@ und dann `http://localhost:8000` öffnen.
   `<section id="impuls">` anpassen. Den vollständigen Text als neuen
   Eintrag (`<article class="archive-entry">`) oben in `archiv.html`
   einfügen, der bisherige Text bleibt darunter erhalten.
-- **Termine:** Tabellen in `index.html` im Abschnitt
-  `<section id="termine">`. Einfach Zeilen (`<tr>`) ergänzen/entfernen
-  bzw. Daten aktualisieren. Vergangene Termine sollten regelmäßig
-  entfernt werden, damit die Seite aktuell wirkt.
+- **Treffzeiten (Startseite):** Die allgemeinen, wiederkehrenden Zeiten
+  (Gemeinschaftsstunde, Bibelstunde …) stehen in `index.html` im Abschnitt
+  `<section id="termine">` als `<ul class="schedule-list">`. Darunter führt
+  der Button „Alle Termine ansehen" auf `termine.html`.
+- **Termine (termine.html):** Die konkreten, datierten Termine stehen als
+  Tabellen in `termine.html` – das ist die Grundlage, die quartalsweise
+  gepflegt wird. Einfach Zeilen (`<tr>`) ergänzen/entfernen bzw. Daten
+  aktualisieren. **Wichtig:** Jede Zeile trägt zusätzlich zum sichtbaren
+  Datum ein Attribut `data-date="JJJJ-MM-TT"` (z.B. `data-date="2026-09-06"`).
+  Daran erkennt die Seite automatisch den nächsten, noch nicht vergangenen
+  Termin und hebt ihn hervor – dieses Attribut also immer mitpflegen.
+  Vergangene Termine sollten regelmäßig entfernt werden, damit die Seite
+  aktuell wirkt.
 
 ## Noch offen / vor Veröffentlichung zu erledigen
 
