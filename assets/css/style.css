@@ -281,21 +281,51 @@ section { padding: 2.75rem 0; }
   color: var(--color-dark);
 }
 
-.schedule-list .what a {
-  color: var(--color-dark);
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-teal-light);
-  transition: color 0.2s ease;
+/* Jugend-Kachel: die gesamte Kachel ist ein sichtbarer Link (→ ec-lo.de) */
+.schedule-list li.is-link {
+  padding: 0;
+  align-items: stretch; /* statt baseline: Link füllt die volle Kachelhöhe */
+  border: 2px solid var(--color-teal-light);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.schedule-list .what a:hover { color: var(--color-teal); }
+.schedule-list li.is-link > a {
+  flex: 1; /* Link füllt die volle Kachelbreite */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: inherit;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+
+.schedule-list li.is-link:hover,
+.schedule-list li.is-link:focus-within {
+  border-color: var(--color-teal);
+  box-shadow: 0 6px 16px rgba(47, 74, 83, 0.12);
+}
+
+.schedule-list li.is-link > a:hover,
+.schedule-list li.is-link > a:focus-visible {
+  background: rgba(127, 193, 204, 0.14);
+}
+
+.schedule-list li.is-link > a:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+.schedule-list li.is-link > a:hover .what { color: var(--color-teal); }
 
 .ext-link::after {
   content: "\2197"; /* ↗ */
+  display: inline-block;
   font-size: 0.8em;
   margin-left: 0.25em;
   color: var(--color-teal);
-  border-bottom: 0;
 }
 
 .schedule-list .when {
