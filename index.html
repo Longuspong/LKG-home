@@ -21,7 +21,7 @@
       <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">&#9776;</button>
       <nav class="main-nav">
         <a href="#news">Aktuelles</a>
-        <a href="#impuls">Impuls</a>
+        <a href="archiv.html">Impuls</a>
         <a href="termine.html">Termine</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -40,29 +40,66 @@
 
     <section id="news" class="news">
       <div class="container">
-        <h2 class="section-title"><span class="kicker">Aktuelles</span>Neuigkeiten aus der Gemeinde</h2>
-        <a class="news-teaser" href="news.html#gartenfest-2026">
-          <figure class="news-teaser__media">
-            <img src="assets/img/gartenfest-2026.jpg" alt="Gäste beim Gartenfest der Landeskirchlichen Gemeinschaft Limbach-Oberfrohna – Hüpfburg, Grill und Begegnung im Garten" loading="lazy">
-          </figure>
-          <div class="news-teaser__body">
-            <span class="news-teaser__date">23. August 2026</span>
-            <h3 class="news-teaser__title">Gartenfest zum Thema „Wasser“</h3>
-            <p>Bei bestem Sommerwetter haben wir gemeinsam gefeiert: Hüpfburg, Spiel, Quiz und Tombola, dazu Andacht, Lieder, Kaffee und Leckeres vom Grill – und viele gute Gespräche.</p>
-            <span class="btn btn-outline">Ganzen Bericht lesen</span>
-          </div>
-        </a>
-      </div>
-    </section>
+        <h2 class="section-title"><span class="kicker">Aktuelles &amp; Impuls</span>Aus der Gemeinde</h2>
 
-    <section id="impuls">
-      <div class="container">
-        <h2 class="section-title"><span class="kicker">Monatsimpuls</span>September 2026</h2>
-        <div class="impuls-card">
-          <blockquote>„Seid meine Nachahmer, gleichwie auch ich Nachahmer des Christus bin!“ [1. Korinther 11,1]</blockquote>
-          <p>Paulus schreibt diese Worte nicht aus Selbstüberschätzung. Er weist nicht auf sich, sondern auf Christus. Wie fremd ist uns dieser Satz heute geworden – dabei lernen Kinder und junge Christen nicht zuerst durch Predigten oder Bücher, sondern durch Menschen, die glaubwürdig hinter Christus hergehen …</p>
-          <p class="impuls-author">R. Dickert</p>
-          <a class="btn btn-outline" href="archiv.html">Ganzen Impuls lesen &amp; Archiv</a>
+        <!--
+          Karussell: alle Teaser liegen als gleich große Folien in EINEM Block
+          nebeneinander und werden per Wischen, Pfeilen oder Punkten geblättert.
+          Neue Folie = weiteren <article class="carousel__slide slide-card"> Block
+          einfügen; die Punkte unten werden automatisch (main.js) erzeugt.
+          Folien ohne Foto nutzen figure.slide-card__media--brand mit einem Icon.
+        -->
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport" data-carousel-viewport tabindex="0" role="group" aria-roledescription="Karussell" aria-label="Aktuelles aus der Gemeinde">
+
+            <article class="carousel__slide slide-card" aria-roledescription="Folie" aria-label="Beitrag 1">
+              <figure class="slide-card__media">
+                <img src="assets/img/gartenfest-2026.jpg" alt="Gäste beim Gartenfest der Landeskirchlichen Gemeinschaft Limbach-Oberfrohna – Hüpfburg, Grill und Begegnung im Garten" loading="lazy">
+              </figure>
+              <div class="slide-card__body">
+                <span class="slide-card__kicker">News · 23. August 2026</span>
+                <h3 class="slide-card__title">Gartenfest zum Thema „Wasser“</h3>
+                <p class="slide-card__text">Bei bestem Sommerwetter haben wir gemeinsam gefeiert: Hüpfburg, Spiel, Quiz und Tombola, dazu Andacht, Lieder, Kaffee und Leckeres vom Grill – und viele gute Gespräche.</p>
+                <a class="btn btn-outline slide-card__btn" href="news.html#gartenfest-2026">Ganzen Bericht lesen</a>
+              </div>
+            </article>
+
+            <article class="carousel__slide slide-card" aria-roledescription="Folie" aria-label="Beitrag 2">
+              <figure class="slide-card__media slide-card__media--brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <rect x="3" y="4.5" width="18" height="16" rx="2"/>
+                  <path d="M3 9.5h18M8 2.5v4M16 2.5v4"/>
+                </svg>
+              </figure>
+              <div class="slide-card__body">
+                <span class="slide-card__kicker">News · 4.–6. September 2026</span>
+                <h3 class="slide-card__title">Themenabende mit Wilfried Plock</h3>
+                <p class="slide-card__text">„Unsere Beziehungen sollen (noch) besser werden!“ – an drei Abenden gehen wir gemeinsam der Frage nach, wie Beziehungen gelingen und wachsen. Herzliche Einladung an alle!</p>
+                <a class="btn btn-outline slide-card__btn" href="news.html#themenabende-2026">Zur Newsseite</a>
+              </div>
+            </article>
+
+            <article class="carousel__slide slide-card" aria-roledescription="Folie" aria-label="Beitrag 3">
+              <figure class="slide-card__media slide-card__media--brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M12 6.4C10.4 5 7.9 4.5 4 4.9v12.4c3.9-.4 6.4.1 8 1.6 1.6-1.5 4.1-2 8-1.6V4.9c-3.9-.4-6.4.1-8 1.5z"/>
+                  <path d="M12 6.4V18.9"/>
+                </svg>
+              </figure>
+              <div class="slide-card__body">
+                <span class="slide-card__kicker">Monatsimpuls · September 2026</span>
+                <h3 class="slide-card__title">„Seid meine Nachahmer, gleichwie auch ich Nachahmer des Christus bin!“</h3>
+                <p class="slide-card__text">Paulus weist nicht auf sich, sondern auf Christus. Kinder und junge Christen lernen nicht zuerst durch Predigten oder Bücher, sondern durch Menschen, die glaubwürdig hinter Christus hergehen …</p>
+                <a class="btn btn-outline slide-card__btn" href="archiv.html">Zu den Monatsimpulsen</a>
+              </div>
+            </article>
+
+          </div>
+
+          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Vorheriger Beitrag" data-carousel-prev>&#8249;</button>
+          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Nächster Beitrag" data-carousel-next>&#8250;</button>
+
+          <div class="carousel__dots" aria-label="Beitrag auswählen" data-carousel-dots></div>
         </div>
       </div>
     </section>
