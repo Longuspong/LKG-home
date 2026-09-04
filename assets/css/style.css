@@ -253,6 +253,217 @@ section { padding: 2.75rem 0; }
   color: var(--color-dark);
 }
 
+/* ---------- Aktuelles / Karussell (Startseite) ---------- */
+
+.news { background: #eef2f0; }
+
+/* Ein Block: alle Beiträge liegen als gleich große Folien nebeneinander
+   und werden per Wischen/Pfeilen/Punkten durchgeblättert. */
+.carousel { position: relative; }
+
+.carousel__viewport {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;            /* Firefox */
+  padding: 6px 0 12px;
+  outline: none;
+}
+
+.carousel__viewport::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+.carousel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Gleich große Karte – Bild/Panel oben, Text darunter, Button unten fixiert */
+.slide-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(47, 74, 83, 0.10);
+  border-top: 5px solid var(--color-teal-light);
+}
+
+.slide-card__media {
+  margin: 0;
+  height: 200px;
+  flex: 0 0 auto;
+}
+
+.slide-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Panel für Folien ohne Foto (Impuls, Ankündigungen) */
+.slide-card__media--brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-dark-2) 55%, var(--color-teal) 100%);
+}
+
+.slide-card__media--brand svg {
+  width: 66px;
+  height: 66px;
+  color: var(--color-text-light);
+  opacity: 0.9;
+}
+
+/* Hochformat-Bilder (z.B. Flyer) vollständig zeigen statt beschneiden */
+.slide-card__media--contain {
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-dark-2) 55%, var(--color-teal) 100%);
+}
+
+.slide-card__media--contain img {
+  object-fit: contain;
+}
+
+.slide-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.slide-card__kicker {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.45rem;
+}
+
+.slide-card__title {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  margin: 0 0 0.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.slide-card__text {
+  margin: 0 0 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.slide-card__btn {
+  margin-top: auto;          /* Button unten in der Karte */
+  align-self: flex-start;
+}
+
+/* Blätter-Pfeile (nur mit JS und auf größeren Screens sichtbar) */
+.carousel__arrow {
+  display: none;
+  position: absolute;
+  top: calc(50% - 12px);
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-dark);
+  box-shadow: 0 3px 10px rgba(47, 74, 83, 0.18);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.carousel__arrow--prev { left: 8px; }
+.carousel__arrow--next { right: 8px; }
+
+.carousel__arrow:hover { background: #fff; color: var(--color-teal); }
+
+.carousel__arrow:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+.carousel__arrow[disabled] { opacity: 0.35; cursor: default; }
+
+/* Punkte: aktiver Punkt hervorgehoben, die anderen gedämpft */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.carousel__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(47, 74, 83, 0.22);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel__dot:hover { background: rgba(47, 74, 83, 0.4); }
+
+.carousel__dot.is-active {
+  background: var(--color-dark);
+  transform: scale(1.35);
+}
+
+.carousel__dot:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .slide-card {
+    flex-direction: row;
+    min-height: 330px;
+  }
+
+  .slide-card__media,
+  .slide-card__media--brand {
+    flex: 0 0 42%;
+    height: auto;            /* füllt die Kartenhöhe */
+  }
+
+  .slide-card__body {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .slide-card__title {
+    font-size: 1.35rem;
+  }
+
+  .slide-card__text {
+    -webkit-line-clamp: 4;
+  }
+
+  .carousel.is-enhanced .carousel__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* ---------- Termine ---------- */
 
 .termine { background: #eef2f0; }
@@ -518,6 +729,65 @@ tr:last-child td { border-bottom: none; }
   text-transform: uppercase;
   color: var(--color-teal);
   margin-bottom: 0.5rem;
+}
+
+/* ---------- News-Beiträge (news.html) ---------- */
+
+.news-post {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(47, 74, 83, 0.08);
+  border-top: 5px solid var(--color-teal-light);
+  margin-bottom: 2rem;
+}
+
+.news-post__media { margin: 0; }
+
+.news-post__media img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+}
+
+.news-post__body { padding: 1.5rem; }
+
+.news-post time {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.5rem;
+}
+
+.news-post h2 {
+  font-size: 1.3rem;
+  color: var(--color-dark);
+  margin: 0 0 0.9rem;
+}
+
+.news-post p { margin: 0 0 1rem; }
+
+.news-post__figure { margin: 1.5rem 0 0.5rem; }
+
+.news-post__figure img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.news-post__figure figcaption {
+  font-size: 0.8rem;
+  color: #6b7a7e;
+  margin-top: 0.5rem;
+}
+
+/* Einladungs-Flyer (Hochformat) nicht auf volle Breite strecken */
+.news-post__figure.is-flyer {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------- Larger screens ---------- */

@@ -8,7 +8,8 @@ per FTP-Upload).
 ## Struktur
 
 ```
-index.html         Startseite (Hero, Impuls-Teaser, Treffzeiten, Kontakt)
+index.html         Startseite (Hero, News-/Impuls-Karussell, Treffzeiten, Kontakt)
+news.html           Aktuelles/Blog – Berichte aus dem Gemeindeleben (mit Bildern)
 termine.html        Alle Termine (Tabellen, nächster Termin hervorgehoben)
 archiv.html         Archiv aller Monatsimpulse (Volltexte)
 impressum.html      Impressum (Platzhalter – siehe unten)
@@ -18,6 +19,7 @@ assets/js/main.js     Mobiles Menü, aktuelles Jahr im Footer
 assets/img/logo.svg              Logo-Zeichen (Tür/Kreuz) – Favicon
 assets/img/logo-navi.svg         Logo weiß mit Gemeindename – Header/Navigation
 assets/img/logo-jesus-erlebt.svg  Logo weiß „Jesus erlebt" – Hero
+assets/img/gartenfest-*.jpg       Bilder zum News-Beitrag „Gartenfest" (Beispiel)
 ```
 
 ## Lokal ansehen
@@ -33,10 +35,33 @@ und dann `http://localhost:8000` öffnen.
 
 ## Inhalte pflegen
 
-- **Monatsimpuls:** Teaser-Text in `index.html` im Abschnitt
-  `<section id="impuls">` anpassen. Den vollständigen Text als neuen
-  Eintrag (`<article class="archive-entry">`) oben in `archiv.html`
-  einfügen, der bisherige Text bleibt darunter erhalten.
+- **Startseiten-Karussell (`<section id="news">`):** Auf der Startseite
+  liegen alle Teaser als gleich große Folien in EINEM Block nebeneinander
+  und werden per Wischen, Pfeilen, Punkten oder Pfeiltasten durchgeblättert
+  (Logik in `assets/js/main.js`, native Wisch-Geste über CSS Scroll-Snap).
+  Jede Folie ist ein `<article class="carousel__slide slide-card">` mit
+  Bild/Panel, Titel, kurzem Anriss und einem Button unten, der auf die
+  passende Seite führt (News → `news.html`, Monatsimpuls → `archiv.html`).
+  Neue Folie = weiteren `carousel__slide`-Block einfügen; die Punkte unten
+  entstehen automatisch. Folien **mit Foto** nutzen
+  `<figure class="slide-card__media"><img …></figure>`, Folien **ohne Foto**
+  (Impuls, Ankündigungen) `<figure class="slide-card__media--brand">` mit
+  einem Inline-SVG-Icon. Titel/Text werden per CSS auf feste Zeilen gekürzt,
+  damit alle Folien gleich groß bleiben.
+- **Monatsimpuls:** Erscheint als eigene Folie im Startseiten-Karussell
+  (Button „Zu den Monatsimpulsen" → `archiv.html`). Den vollständigen Text
+  als neuen Eintrag (`<article class="archive-entry">`) oben in `archiv.html`
+  einfügen (bisherige Texte bleiben darunter) und den Folien-Anriss auf der
+  Startseite entsprechend aktualisieren.
+- **Aktuelles / News (`news.html`):** Die vollständigen Berichte stehen als
+  `<article class="news-post">` (neueste zuerst) auf `news.html`. Bilder
+  gehören nach `assets/img/`; das Titelbild kommt in
+  `<figure class="news-post__media">`, weitere Bilder im Text in
+  `<figure class="news-post__figure">` (Hochformat-Flyer zusätzlich mit
+  Klasse `is-flyer`, damit sie nicht auf volle Breite gestreckt werden). Ein
+  Beitrag ohne Foto lässt die `news-post__media`-Figur einfach weg. Jeder
+  `<article>` bekommt eine `id` (z.B. `id="gartenfest-2026"`), damit die
+  Karussell-Folie gezielt darauf verlinken kann.
 - **Treffzeiten (Startseite):** Die allgemeinen, wiederkehrenden Zeiten
   (Gemeinschaftsstunde, Bibelstunde …) stehen in `index.html` im Abschnitt
   `<section id="termine">` als `<ul class="schedule-list">`. Darunter führt
@@ -72,7 +97,10 @@ und dann `http://localhost:8000` öffnen.
 
 Farben und Formsprache orientieren sich am aktuellen Flyer-Design
 (dunkles Petrol/Teal, helles Türkis, Gelb als Akzent, kräftige
-Großbuchstaben-Headlines). Die Seite ist bewusst als ein einziger
-Seiten-Fluss (One-Pager) mit nur zwei Inhalten aufgebaut: Termine und
-Monatsimpuls (mit Link ins Archiv), plus Impressum/Datenschutz im
-Footer, da diese gesetzlich erforderlich sind.
+Großbuchstaben-Headlines). Die Startseite ist als ein Seiten-Fluss
+(One-Pager) aufgebaut: ein Karussell „Aus der Gemeinde" (News-Beiträge und
+Monatsimpuls als gleich große, wischbare Folien mit je einem Button auf die
+passende Seite) und darunter die Termine, plus Impressum/Datenschutz im
+Footer, da diese gesetzlich erforderlich sind. Die vollständigen
+News-Berichte liegen auf `news.html`, die Monatsimpulse im Archiv
+(`archiv.html`).
