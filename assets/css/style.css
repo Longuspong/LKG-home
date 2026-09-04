@@ -319,6 +319,15 @@ section { padding: 2.75rem 0; }
   opacity: 0.9;
 }
 
+/* Hochformat-Bilder (z.B. Flyer) vollständig zeigen statt beschneiden */
+.slide-card__media--contain {
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-dark-2) 55%, var(--color-teal) 100%);
+}
+
+.slide-card__media--contain img {
+  object-fit: contain;
+}
+
 .slide-card__body {
   display: flex;
   flex-direction: column;
