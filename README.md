@@ -8,7 +8,8 @@ per FTP-Upload).
 ## Struktur
 
 ```
-index.html         Startseite (Hero, Impuls-Teaser, Treffzeiten, Kontakt)
+index.html         Startseite (Hero, News-Teaser, Impuls-Teaser, Treffzeiten, Kontakt)
+news.html           Aktuelles/Blog – Berichte aus dem Gemeindeleben (mit Bildern)
 termine.html        Alle Termine (Tabellen, nächster Termin hervorgehoben)
 archiv.html         Archiv aller Monatsimpulse (Volltexte)
 impressum.html      Impressum (Platzhalter – siehe unten)
@@ -18,6 +19,7 @@ assets/js/main.js     Mobiles Menü, aktuelles Jahr im Footer
 assets/img/logo.svg              Logo-Zeichen (Tür/Kreuz) – Favicon
 assets/img/logo-navi.svg         Logo weiß mit Gemeindename – Header/Navigation
 assets/img/logo-jesus-erlebt.svg  Logo weiß „Jesus erlebt" – Hero
+assets/img/gartenfest-*.jpg       Bilder zum News-Beitrag „Gartenfest" (Beispiel)
 ```
 
 ## Lokal ansehen
@@ -37,6 +39,18 @@ und dann `http://localhost:8000` öffnen.
   `<section id="impuls">` anpassen. Den vollständigen Text als neuen
   Eintrag (`<article class="archive-entry">`) oben in `archiv.html`
   einfügen, der bisherige Text bleibt darunter erhalten.
+- **Aktuelles / News:** Auf der Startseite steht in `index.html` im
+  Abschnitt `<section id="news">` ein Teaser mit Bild, der auf den
+  neuesten Beitrag in `news.html` verlinkt (`news-teaser`). Den ganzen
+  Bericht als neuen Block (`<article class="news-post">`) oben in
+  `news.html` einfügen (neueste zuerst) und den Teaser auf der Startseite
+  (Bild, Datum, Titel, kurzer Anriss) entsprechend aktualisieren. Bilder
+  gehören nach `assets/img/`; das Titelbild kommt in
+  `<figure class="news-post__media">`, weitere Bilder im Text in
+  `<figure class="news-post__figure">` (Hochformat-Flyer zusätzlich mit
+  Klasse `is-flyer`, damit sie nicht auf volle Breite gestreckt werden).
+  Jeder `<article>` bekommt eine `id` (z.B. `id="gartenfest-2026"`), damit
+  der Teaser gezielt darauf verlinken kann.
 - **Treffzeiten (Startseite):** Die allgemeinen, wiederkehrenden Zeiten
   (Gemeinschaftsstunde, Bibelstunde …) stehen in `index.html` im Abschnitt
   `<section id="termine">` als `<ul class="schedule-list">`. Darunter führt
@@ -72,7 +86,7 @@ und dann `http://localhost:8000` öffnen.
 
 Farben und Formsprache orientieren sich am aktuellen Flyer-Design
 (dunkles Petrol/Teal, helles Türkis, Gelb als Akzent, kräftige
-Großbuchstaben-Headlines). Die Seite ist bewusst als ein einziger
-Seiten-Fluss (One-Pager) mit nur zwei Inhalten aufgebaut: Termine und
-Monatsimpuls (mit Link ins Archiv), plus Impressum/Datenschutz im
-Footer, da diese gesetzlich erforderlich sind.
+Großbuchstaben-Headlines). Die Startseite ist als ein Seiten-Fluss
+(One-Pager) aufgebaut: Aktuelles (News-Teaser mit Bild, mit Link auf die
+Seite `news.html`), Monatsimpuls (mit Link ins Archiv) und Termine, plus
+Impressum/Datenschutz im Footer, da diese gesetzlich erforderlich sind.

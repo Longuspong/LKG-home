@@ -253,6 +253,84 @@ section { padding: 2.75rem 0; }
   color: var(--color-dark);
 }
 
+/* ---------- Aktuelles / News-Teaser (Startseite) ---------- */
+
+.news { background: #eef2f0; }
+
+.news-teaser {
+  display: block;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(47, 74, 83, 0.08);
+  border-top: 5px solid var(--color-teal-light);
+}
+
+/* Gesamte Kachel ist ein Link (→ news.html) */
+a.news-teaser {
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease;
+}
+
+a.news-teaser:hover { box-shadow: 0 12px 28px rgba(47, 74, 83, 0.16); }
+
+a.news-teaser:hover .btn-outline {
+  background: var(--color-dark);
+  color: var(--color-text-light);
+}
+
+a.news-teaser:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+}
+
+.news-teaser__media { margin: 0; }
+
+.news-teaser__media img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.news-teaser__body { padding: 1.6rem 1.5rem 1.75rem; }
+
+.news-teaser__date {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.4rem;
+}
+
+.news-teaser__title {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  margin: 0 0 0.6rem;
+}
+
+.news-teaser__body p { margin: 0 0 1.25rem; }
+
+@media (min-width: 640px) {
+  .news-teaser {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    align-items: stretch;
+  }
+
+  .news-teaser__media img {
+    height: 100%;
+    min-height: 240px;
+  }
+
+  .news-teaser__body {
+    padding: 1.9rem;
+    align-self: center;
+  }
+}
+
 /* ---------- Termine ---------- */
 
 .termine { background: #eef2f0; }
@@ -518,6 +596,65 @@ tr:last-child td { border-bottom: none; }
   text-transform: uppercase;
   color: var(--color-teal);
   margin-bottom: 0.5rem;
+}
+
+/* ---------- News-Beiträge (news.html) ---------- */
+
+.news-post {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(47, 74, 83, 0.08);
+  border-top: 5px solid var(--color-teal-light);
+  margin-bottom: 2rem;
+}
+
+.news-post__media { margin: 0; }
+
+.news-post__media img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+}
+
+.news-post__body { padding: 1.5rem; }
+
+.news-post time {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.5rem;
+}
+
+.news-post h2 {
+  font-size: 1.3rem;
+  color: var(--color-dark);
+  margin: 0 0 0.9rem;
+}
+
+.news-post p { margin: 0 0 1rem; }
+
+.news-post__figure { margin: 1.5rem 0 0.5rem; }
+
+.news-post__figure img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.news-post__figure figcaption {
+  font-size: 0.8rem;
+  color: #6b7a7e;
+  margin-top: 0.5rem;
+}
+
+/* Einladungs-Flyer (Hochformat) nicht auf volle Breite strecken */
+.news-post__figure.is-flyer {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------- Larger screens ---------- */
